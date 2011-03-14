@@ -14,11 +14,18 @@
 	NSMutableArray *mArrayList;
 	NSIndexSet *mSelectedIndexSet;
 	IBOutlet NSArrayController *arrayController;
+	BOOL isNotTrue;
+	
+	NSMutableArray *m2ndArrayList;
+	NSInteger m2ndArrayListSelection;
 }
 
-@property (nonatomic,retain) NSNumber *sliderValue;
-@property (nonatomic,retain) NSMutableArray *arrayList;
-@property (nonatomic,retain) NSIndexSet *selectedIndexSet;
+@property (readonly, getter = isNotTrue) BOOL isNotTrue;
+@property (retain) NSNumber *sliderValue;//Will be auto retained and auto released
+@property (retain) NSMutableArray *arrayList;//Will be auto retained and auto released
+@property (retain) NSIndexSet *selectedIndexSet;//Will be auto retained and auto released
+@property (retain) NSMutableArray *m2ndArrayList;//Will be auto retained and auto released
+@property (assign) NSInteger m2ndArrayListSelection;
 
 - (IBAction)add:(id)sender;
 - (IBAction)remove:(id)sender;
